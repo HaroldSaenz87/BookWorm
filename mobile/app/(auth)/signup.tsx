@@ -28,6 +28,7 @@ export default function Signup() {
       Alert.alert("Error", result.error);
       
     }
+    
   };
 
   return (
