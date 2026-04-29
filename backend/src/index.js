@@ -14,7 +14,8 @@ const PORT = process.env.PORT || 5000;
 
 job.start();
 // Middleware to parse incoming request
-app.use(express.json());
+app.use(express.json({ limit: '50mb' }));
+app.use(express.urlencoded({ limit: '50mb', extended: true }));
 app.use(cors());
 
 // define route handlers for authentication and related requests

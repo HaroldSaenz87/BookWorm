@@ -25,7 +25,7 @@ export const useAuthStore = create<AuthState>((set) => ({
 
     user: null,
     token: null,
-    isLoading: false,
+    isLoading: true,
 
     register: async (username, email, password) => {
         set({ isLoading: true });
@@ -75,14 +75,18 @@ export const useAuthStore = create<AuthState>((set) => ({
 
     checkAuth: async() => {
 
+        set({ isLoading: true });
+
         try {
 
             const token = await AsyncStorage.getItem("token");
             const userJson = await AsyncStorage.getItem("user");
 
             if (token && userJson) {
-                const user = JSON.parse(userJson);
-                set({ token, user });
+                set({ token, user: JSON.parse(userJson), isLoading: false });
+            }
+            else {
+                set({ isLoading: false });
             }
 
             
