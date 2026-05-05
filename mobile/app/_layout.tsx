@@ -4,6 +4,7 @@ import SafeScreen from "../components/SafeScreen";
 import { StatusBar } from "expo-status-bar";
 import { useAuthStore } from "@/store/authStore";
 import { useEffect } from "react";
+import Loader from "@/components/Loader";
 
 
 
@@ -36,7 +37,7 @@ export default function RootLayout() {
   }, [user, token, segments, isLoading]);
   
 
-  if(isLoading) return null;
+  if(isLoading) return <Loader visible={true} />;
 
 
   return(

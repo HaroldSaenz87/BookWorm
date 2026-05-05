@@ -8,6 +8,7 @@ import LogoutButton from '@/components/LogoutButton';
 import { Ionicons } from '@expo/vector-icons';
 import COLORS from '@/constants/colors';
 import { Image } from 'expo-image';
+import Loader from '@/components/Loader';
 
 export default function Profile() {
 
@@ -114,6 +115,8 @@ export default function Profile() {
 
     setRefreshing(false);
   };
+
+  if(isLoading && !refreshing) return <Loader />;
 
   const renderBookItem = ({item}: {item : any}) => {
 
