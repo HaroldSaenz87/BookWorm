@@ -121,7 +121,7 @@ export default function Profile() {
 
       <View style={styles.bookItem}>
 
-        <Image source={item.image} style={styles.bookImage} />
+        <Image source={{uri: item.image}} style={styles.bookImage} />
 
         <View style={styles.bookInfo}>
 
