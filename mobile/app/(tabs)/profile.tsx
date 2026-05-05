@@ -53,6 +53,7 @@ export default function Profile() {
 
     }
     finally{
+      await sleep(200);
       setIsLoading(false);
     }
 
@@ -116,7 +117,7 @@ export default function Profile() {
     setRefreshing(false);
   };
 
-  if(isLoading && !refreshing) return <Loader />;
+  if(isLoading && !refreshing) return <Loader visible={true}/>;
 
   const renderBookItem = ({item}: {item : any}) => {
 
