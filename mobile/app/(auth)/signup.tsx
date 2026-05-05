@@ -44,8 +44,8 @@ export default function Signup() {
             {/* Header */}
             <View style={styles.header}>
 
-              <Text style={styles.title}>BookWorm</Text>
-              <Text style={styles.subtitle}>Share your favorite reads</Text>
+              <Text style={styles.title}>BookDrop</Text>
+              <Text style={styles.subtitle}>The place where great books land</Text>
 
             </View>
 
