@@ -112,13 +112,18 @@ export default function Create() {
 
       const responseText = await response.text();
 
-      // 2. Try to parse it manually
+      //Try to parse it manually
       let data;
+
       try {
+
         data = JSON.parse(responseText);
+
       } catch (e) {
+
         console.error("Server returned HTML/Non-JSON:", responseText);
         throw new Error("The server encountered an error. Check logs for details.");
+      
       }
 
       if (!response.ok) {
@@ -137,9 +142,13 @@ export default function Create() {
 
 
     } catch (error: any) {
+
       Alert.alert("Error", error.message || "Something went wrong");
+    
     }finally{
+      
       setLoading(false);
+    
     }
 
   };

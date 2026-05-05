@@ -33,6 +33,7 @@ export default function RootLayout() {
       router.replace("/(tabs)");
     }
   }, [user, token, segments, isLoading]);
+  
 
   if(isLoading) return null;
 

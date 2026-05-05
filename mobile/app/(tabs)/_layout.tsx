@@ -9,6 +9,7 @@ export default function TabLayout() {
     const insets = useSafeAreaInsets();
 
   return (
+    
     <Tabs 
         screenOptions={{
             headerShown: false, 
