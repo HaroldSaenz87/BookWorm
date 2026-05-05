@@ -100,7 +100,7 @@ export default function Profile() {
   };
 
   const confirmDel = (bookId: string) => {
-    Alert.alert("Delete Recommedation", "Are you sure you want to delete this recommendation?",[
+    Alert.alert("Delete Recommendation", "Are you sure you want to delete this recommendation?",[
       {text: "Cancel", style: "cancel"},
       {text: "Delete", style: "destructive", onPress: () => handleDeleteBook(bookId) },
     ])
